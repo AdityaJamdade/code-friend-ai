@@ -1,0 +1,32 @@
+/* Navbar.css */
+.navbar {
+    overflow: hidden;
+    background-color: #060606;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px;
+}
+
+.navbar a {
+    margin: 0 10px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: rgb(0, 14, 77);
+    color: black;
+}
+
+.logo {
+    float: left;
+}
+
+.about-link {
+    float: right;
+}
