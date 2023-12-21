@@ -10,7 +10,7 @@
 }
 
 .navbar a {
-    margin: 0 10px;
+    margin: 0 30px;
     display: block;
     color: white;
     text-align: center;
@@ -19,14 +19,35 @@
 }
 
 .navbar a:hover {
-    background-color: rgb(0, 14, 77);
-    color: black;
+    background-color: rgb(11, 0, 105);
+    border-radius: 12px;
+    transition: background-color 0.5s ease;
 }
 
 .logo {
     float: left;
+    color: white; 
+    font-weight: bold;
 }
 
 .about-link {
     float: right;
+}
+
+/* Adjusted styles for better mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar a {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .logo,
+    .about-link {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
 }
