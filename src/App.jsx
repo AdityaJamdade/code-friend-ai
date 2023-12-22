@@ -1,11 +1,16 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import Signup from './screens/signup/Signup'
 
 function App() {
 
   return (
     <>
-      <Navbar />       
+      <div className="app">
+
+        <Navbar />
+        <Signup />
+      </div>
     </>
   )
 }
