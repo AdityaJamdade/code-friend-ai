@@ -1,15 +1,14 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import Signup from './screens/signup/Signup'
+import InputRepo from './screens/InputRepo/InputRepo'
 
 function App() {
 
   return (
     <>
       <div className="app">
-
         <Navbar />
-        <Signup />
+        <InputRepo />
       </div>
     </>
   )
