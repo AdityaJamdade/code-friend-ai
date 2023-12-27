@@ -1,16 +1,34 @@
 // InputRepo.jsx
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './InputRepo.css';
 
 const InputRepo = (
     // { onSubmit }
 ) => {
     const [repoUrl, setRepoUrl] = useState('');
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        // Set focus on the input when the component mounts
+        inputRef.current.focus();
+    }, []);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(repoUrl)
-        // onSubmit({ repoUrl, question });
+
+        // Regular expression to match GitHub repository URLs
+        const githubRepoPattern = /^https:\/\/github\.com\/[a-zA-Z0-9-]+\/[a-zA-Z0-9-]+$/;
+
+        // Check if the input matches the GitHub repository pattern
+        const isValidInput = githubRepoPattern.test(repoUrl);
+
+        if (isValidInput) {
+            console.log(repoUrl);
+            // onSubmit({ repoUrl, question });
+        } else {
+            alert('Hello there, You are missing something!')
+        }
+        inputRef.current.focus();
     };
 
     return (
@@ -20,6 +38,7 @@ const InputRepo = (
                 <div className="form-group">
                     <label htmlFor="repoUrl">GitHub Repository URL:</label>
                     <input
+                        ref={inputRef}
                         type="text"
                         id="repoUrl"
                         name="repoUrl"
