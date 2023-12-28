@@ -35,7 +35,7 @@
 }
 
 /* Adjusted styles for better mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     .navbar a {
         float: none;
         text-align: center;
