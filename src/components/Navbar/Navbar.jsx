@@ -1,11 +1,11 @@
-// Navbar.jsx
-import './Navbar.css'; // Import the CSS file for styling
+import './Navbar.css';
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <a href="#" className="logo">CODE - FRIEND</a>
-            <a href="#" className="about-link">About</a>
+            <a href="/" className="logo">CODE - FRIEND</a>
+            <a href="/login" className="about-link">Login</a>
+            <a href="about" className="about-link">About</a>
         </div>
     );
 }
