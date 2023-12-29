@@ -1,6 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import InputRepo from './screens/InputRepo/InputRepo'
+import Signup from './screens/signup/Signup'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="app">
         <Navbar />
-        <InputRepo />
+        <Signup />
       </div>
     </>
   )
