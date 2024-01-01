@@ -5,6 +5,7 @@ const Signup = () => {
     <div className='signup-box'>
         <button className="sign-in-with-git">Sign Up with Github</button>
         
+        
     </div>
   )
 }
