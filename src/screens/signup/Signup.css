@@ -1,33 +1,57 @@
-/* Signup.css */
-.signup-container {
+/* Auth.css */
+.auth-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 80vh;
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #f0f0f0; /* Light gray background */
   }
   
-  .signup-card {
+  .auth-card {
     max-width: 400px;
     width: 100%;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slight shadow for elevation */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slight shadow for elevation */
     border-radius: 12px;
     text-align: center;
     transition: box-shadow 0.3s ease; /* Smooth transition on hover */
   }
   
-  .signup-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Increased elevation on hover */
+  .auth-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Elevation on hover */
   }
   
-  .signup-card h2 {
+  .auth-tabs {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    color: #333; /* Dark text color */
   }
   
-  .sign-in-button {
+  .auth-tab {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .auth-tab:hover {
+    background-color: #e0e0e0; /* Light gray on hover */
+  }
+  
+  .auth-tab.active {
+    background-color: #4285f4; /* Google Blue for active tab */
+    color: white;
+  }
+  
+  .auth-content {
+    padding: 20px 0;
+  }
+  
+  .auth-button {
     width: 100%;
     padding: 12px;
     margin-bottom: 12px;
@@ -38,17 +62,17 @@
     transition: background-color 0.3s ease; /* Smooth transition on hover */
   }
   
-  .sign-in-button.google {
+  .auth-button.google {
     background-color: #4285f4; /* Google Blue */
     color: white;
   }
   
-  .sign-in-button.github {
+  .auth-button.github {
     background-color: #24292e; /* GitHub Black */
     color: white;
   }
   
-  .sign-in-button:hover {
+  .auth-button:hover {
     background-color: #2a2e33; /* Slightly darker color on hover */
     opacity: 0.8;
   }
