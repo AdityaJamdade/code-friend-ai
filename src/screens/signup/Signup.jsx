@@ -27,7 +27,9 @@ const Signup = () => {
         </div>
         {activeTab === 'signup' && (
           <div className='auth-content'>
-            <button className="auth-button google">Sign Up with Google</button>
+            <button className="auth-button google">Sign Up with Google
+              
+            </button>
             <button className="auth-button github">
 
               Sign Up with GitHub
