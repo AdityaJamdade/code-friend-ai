@@ -30,9 +30,16 @@ ul {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
-
+.nav-list{
+  align-items: center;
+}
 .nav-item:hover {
   color: #61dafb; /* Change color on hover */
+}
+
+.avatar{
+  height: 30px;
+  border-radius: 50%;
 }
 
 .about-link {
@@ -47,3 +54,4 @@ ul {
 .about-link:hover {
   background-color: #4fa3d1; /* Change background color on hover */
 }
+

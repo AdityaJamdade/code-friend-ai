@@ -28,13 +28,13 @@ function App() {
 
     getUser();
   }, [])
-  
+
   console.log(user);
 
   return (
     <>
       <div className="app">
-        <Navbar />
+        <Navbar user={user} />
         <Signup />
       </div>
     </>
