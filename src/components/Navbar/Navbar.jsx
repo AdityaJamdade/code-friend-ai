@@ -1,8 +1,21 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ user }) => {
 
+    const [isDropdownOpen, setDropdownOpen] = useState(false); // State to manage dropdown visibility
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
+
+    const closeDropdown = () => {
+        setDropdownOpen(false);
+    };
+
+    // eslint-disable-next-line no-unused-vars
     const handleLogout = () => {
         window.open("http://localhost:8000/auth/logout", "_self");
     };
@@ -10,26 +23,30 @@ const Navbar = ({ user }) => {
     return (
         <div className="navbar">
             <span>
-                <a href="/" className="logo">CODE - FRIEND </a>
+                <Link to="/" className="logo">CODE - FRIEND </Link>
             </span>
             <ul className='nav-list'>
-                {user
-                    &&
+                {user ? (
                     <>
-                        <li className="nav-item">{user.displayName}</li>
-                        <li className="nav-item">
-                            <img
-                                src={user.photos[0].value}
-                                alt=""
-                                className="avatar"
-                            />
+                        <li className="nav-item" onClick={toggleDropdown}>
+                            <img src={user.photos[0].value} alt="" className="avatar" />
+                            {/* Dropdown content */}
+                            {isDropdownOpen && (
+                                <div className="dropdown">
+                                    <Link to="/dashboard" onClick={closeDropdown}>Dashboard</Link>
+                                    <Link to="/about" onClick={closeDropdown}>About</Link>
+                                    <Link onClick={handleLogout}>Logout</Link>
+                                </div>
+                            )}
                         </li>
-                        <li className="nav-item" onClick={handleLogout}>Logout</li>
                     </>
-                }
-                <li className="nav-item">
-                    <a href="/about" className="about-link">About</a>
-                </li>
+                ) : (
+                    <>
+                        <li className='nav-item'>
+                            <Link className='login-link' to="/auth">Login</Link>
+                        </li>
+                    </>
+                )}
             </ul>
 
         </div>
