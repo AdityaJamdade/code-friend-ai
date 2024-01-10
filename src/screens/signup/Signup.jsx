@@ -35,10 +35,10 @@ const Signup = () => {
         </div>
         {activeTab === 'signup' && (
           <div className='auth-content'>
-            <button className="auth-button google">
+            <button className="auth-button google" onClick={googleLogin}>
               Google
             </button>
-            <button className="auth-button github">
+            <button className="auth-button github" onClick={githubLogin}>
               GitHub
             </button>
           </div>

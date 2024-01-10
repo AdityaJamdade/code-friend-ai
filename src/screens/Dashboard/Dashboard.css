@@ -1,0 +1,51 @@
+.repositories-title {
+  margin: 10px 10px;
+}
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Styles for each repository card */
+.repository-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin: 16px;
+  width: 300px; /* Fixed width for larger screens */
+  transition: transform 0.3s ease-in-out;
+}
+.repository-card:hover {
+  box-shadow: 5px 4px 10px rgba(2, 3, 0, 0.1);
+}
+.repo-numbers {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.repo-header {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github-repo-pointer {
+  display: inline;
+  position: relative;
+  top: -5px;
+}
+/* Responsive layout adjustments */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    justify-content: center;
+  }
+
+  .repository-card {
+    width: calc(100% - 32px);
+  }
+}

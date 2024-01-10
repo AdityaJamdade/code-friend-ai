@@ -4,6 +4,7 @@ import Signup from './screens/signup/Signup'
 import { useEffect, useState } from 'react'
 import Home from './screens/Home/Home'
 import { Route, Routes } from 'react-router-dom'
+import Dashboard from './screens/Dashboard/Dashboard'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -31,8 +32,6 @@ function App() {
     getUser();
   }, [])
 
-  console.log(user);
-
   return (
     <>
       <div className="app">
@@ -40,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
 
         </Routes>
       </div>
